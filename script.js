@@ -140,7 +140,7 @@ cmdInput.addEventListener('keydown', async (event) => {
             outputDiv.insertAdjacentHTML('beforeend', '<br>incognito | $' + crushResponse) + '<br>';
             cmdInput.focus();
         } else if (command === 'fa smiley' || command === 'smiley1.png' || command === 'crush png' || command === 'crush pic 1' || command === 'crush pic1' || command === 'crush img 1' || command === 'crush img1') {
-            const imgResponse = '<div onclick="alertUser();"><img id="img" src="krismaChakma.png" alt="Lovely Krisma Chakma"></div>\n<span id="caption">Caption: Lovely Krisma Chakma</span><br>';
+            const imgResponse = '<div onclick="alertUser();"><img id="img" src="KrismaChakma.png" alt="Lovely Krisma Chakma"></div>\n<span id="caption">Caption: Lovely Krisma Chakma</span><br>';
             outputDiv.insertAdjacentHTML('beforeend', '<br>MAKSON | ' + imgResponse);
             cmdInput.focus();
         } else if (command === 'ip' || command === 'my ip' || command === 'what is my ip' || command === 'ip address') {
