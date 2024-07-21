@@ -4,17 +4,17 @@ let isConnectedToMakson = false;
 let scriptElement;
 
 function simulateTerminalResponse(response) {
-    outputDiv.innerHTML += '<span style="color: red;">INCOGNITO</span> |$ ' + '<br>';
+    outputDiv.innerHTML += '<div style="color: red;">INCOGNITO</div> |$ ' + '<br>';
     const responseElement = document.createElement('div');
     responseElement.style.color = '#55ff55';
-    responseElement.style.display = "inline-block";
+    responseElement.style.display = "";
     responseElement.style.color = 'white';
     outputDiv.appendChild(responseElement);
 
     let index = 0;
     const intervalId = setInterval(() => {
         if (response[index] === '') {
-            responseElement.appendChild(document.createElement(''));
+            responseElement.appendChild(document.createElement('div'));
         } else {
             responseElement.innerHTML += response[index] + '';
         }
@@ -40,7 +40,7 @@ cmdInput.addEventListener('keydown', async (event) => {
 
         const command = cmdInput.innerText.trim().toLowerCase();
         const commandPrompt = '<span style="color: #55ff55;" id="">YOU |</span>';
-        outputDiv.innerHTML += `<div style="color: #;" id="user-input">${commandPrompt}<span>${command}</span></div>`;
+        outputDiv.innerHTML += `<span style="color: #;" id="user-input">${commandPrompt}<span>${command}</span></span>`;
 
 
         if (command.startsWith('print')) {
@@ -122,7 +122,7 @@ cmdInput.addEventListener('keydown', async (event) => {
             outputDiv.insertAdjacentHTML('beforeend', '<br>incognito | $' + crushResponse) + '<br>';
             cmdInput.focus();
         } else if (command === 'fa smiley' || command === 'smiley1.png' || command === 'crush png' || command === 'crush pic 1' || command === 'crush pic1' || command === 'crush img 1' || command === 'crush img1') {
-            const imgResponse = '<div onclick="alertUser();"><img id="img" src="krismaChakma.png" alt="Lovely Krisma Chakma"></div>\n<span id="caption">Caption: Lovely Krisma Chakma</span><br>';
+            const imgResponse = '<div onclick="alertUser();"><img id="img" src="KrismaChakma.png" alt="Lovely Krisma Chakma"></div>\n<span id="caption">Caption: Lovely Krisma Chakma</span><br>';
             outputDiv.insertAdjacentHTML('beforeend', '<br>' + imgResponse);
             cmdInput.focus();
         } else if (command === 'gps tool') {
