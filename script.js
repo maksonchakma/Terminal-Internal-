@@ -7,14 +7,14 @@ function simulateTerminalResponse(response) {
     outputDiv.innerHTML += '<div style="color: red;">INCOGNITO</div> |$ ' + '<br>';
     const responseElement = document.createElement('div');
     responseElement.style.color = '#55ff55';
-    responseElement.style.display = "";
+    responseElement.style.display = "block";
     responseElement.style.color = 'white';
     outputDiv.appendChild(responseElement);
 
     let index = 0;
     const intervalId = setInterval(() => {
         if (response[index] === '') {
-            responseElement.appendChild(document.createElement('div'));
+            responseElement.appendChild(document.createElement(''));
         } else {
             responseElement.innerHTML += response[index] + '';
         }
