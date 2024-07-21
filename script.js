@@ -13,8 +13,8 @@ function simulateTerminalResponse(response) {
 
     let index = 0;
     const intervalId = setInterval(() => {
-        if (response[index] === '\n') {
-            responseElement.appendChild(document.createElement('br'));
+        if (response[index] === '') {
+            responseElement.appendChild(document.createElement(''));
         } else {
             responseElement.innerHTML += response[index] + '';
         }
@@ -26,7 +26,7 @@ function simulateTerminalResponse(response) {
             cmdInput.focus();
         }
     },
-        30);
+        20);
 }
 
 cmdInput.addEventListener('keydown', async (event) => {
