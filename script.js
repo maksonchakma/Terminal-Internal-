@@ -39,7 +39,7 @@ cmdInput.addEventListener('keydown', async (event) => {
         }
 
         const command = cmdInput.innerText.trim().toLowerCase();
-        const commandPrompt = '<span style="color: #55ff55;" id="">YOU |</span>';
+        const commandPrompt = '<div style="color: #55ff55;" id="">YOU |</div>';
         outputDiv.innerHTML += `<span style="color: #;" id="user-input">${commandPrompt}<span>${command}</span></span>`;
 
 
