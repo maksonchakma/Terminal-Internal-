@@ -4,7 +4,7 @@ let isConnectedToMakson = false;
 let scriptElement;
 
 function simulateTerminalResponse(response) {
-    outputDiv.innerHTML += '<span style="color: red;">INCOGNITO</span> |$ ';
+    outputDiv.innerHTML += '<span style="color: red;">INCOGNITO</span> |$ ' + '<br>';
     const responseElement = document.createElement('div');
     responseElement.style.color = '#55ff55';
     responseElement.style.display = "inline-block";
